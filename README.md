@@ -1,3 +1,14 @@
+# nr-solver
+**Newton - Raphson numerical solver for n-dimensions written in TypeScript.**<br>
+
+## Autor
+j-arb
+
+## Licencia
+This project is governed by the "GNU General Public License". You can find a copy of the license in the [LICENCE](/LICENSE) file of this repository.
+
+## Example usage
+<pre>
 import { Matrix, matrix, zeros } from "mathjs";
 import { Differentiator } from "./differentiator";
 import { Solver } from "./solver";
@@ -11,3 +22,4 @@ let f = (x: Matrix) => matrix([
 ]);
 
 console.log(slvr.solve(f, x0));
+</pre>
