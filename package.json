@@ -1,0 +1,17 @@
+{
+  "name": "nr-solver",
+  "version": "0.0.1",
+  "description": "Newton Raphson numerical solver for n dimensions",
+  "main": "build/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/build"
+  ],
+  "devDependencies": {
+    "@types/mathjs": "^9.4.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "mathjs": "^13.0.0"
+  }
+}
