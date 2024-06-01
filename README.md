@@ -8,7 +8,7 @@ j-arb
 This project is governed by the "GNU General Public License". You can find a copy of the license in the [LICENCE](/LICENSE) file of this repository.
 
 ## Example usage
-<pre>
+```ts
 import { Matrix, matrix, zeros } from "mathjs";
 import { Differentiator } from "./differentiator";
 import { Solver } from "./solver";
@@ -22,4 +22,4 @@ let f = (x: Matrix) => matrix([
 ]);
 
 console.log(slvr.solve(f, x0));
-</pre>
+```
