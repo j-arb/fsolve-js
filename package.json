@@ -1,6 +1,6 @@
 {
   "name": "nr-solver",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "description": "Newton Raphson numerical solver for n dimensions",
   "main": "build/index.js",
