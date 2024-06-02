@@ -1,2 +1,2 @@
-export { Differentiator } from "./differentiator";
-export { Solver } from "./solver";
+export { Differentiator } from "./differentiator.js";
+export { Solver } from "./solver.js";

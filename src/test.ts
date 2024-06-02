@@ -1,6 +1,6 @@
 import { Matrix, matrix, zeros } from "mathjs";
-import { Differentiator } from "./differentiator";
-import { Solver } from "./solver";
+import { Differentiator } from "./differentiator.js";
+import { Solver } from "./solver.js";
 
 let slvr = new Solver(1e-3, 1e10, Infinity, 1e-6);
 let diff = new Differentiator();

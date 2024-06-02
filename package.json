@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "nr-solver",
   "version": "0.0.7",
   "description": "Newton Raphson numerical solver for n dimensions",

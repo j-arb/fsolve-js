@@ -1,4 +1,4 @@
-import { Differentiator } from "./differentiator";
+import { Differentiator } from "./differentiator.js";
 import { multiply, lusolve, add, matrix, index, transpose, Matrix, max, inv, abs } from "mathjs";
 
 /**
