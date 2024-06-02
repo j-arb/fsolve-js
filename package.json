@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "description": "Newton Raphson numerical solver for n dimensions",
   "main": "build/index.js",
-  "types": "dist/index.d.ts",
+  "types": "build/index.d.ts",
   "files": [
     "/build"
   ],
