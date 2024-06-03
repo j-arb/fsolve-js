@@ -1,13 +1,46 @@
 {
-  "type": "module",
-  "name": "nr-solver",
-  "version": "0.0.8",
-  "description": "Newton Raphson numerical solver for n dimensions",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "files": [
-    "/build"
+  "name": "fsolve-js",
+  "version": "1.0.0",
+  "description": "A numerical solver for non-linear systems of equations, utilizing the n-dimensional Newton-Raphson method.",
+  "keywords": [
+    "newton-raphson",
+    "numerical-solver",
+    "non-linear-equations",
+    "n-dimensional",
+    "multi-dimensional",
+    "root-finding",
+    "equation-solver",
+    "fsolve",
+    "numerical-methods",
+    "math",
+    "mathematics",
+    "algorithm",
+    "scientific-computing",
+    "nonlinear-systems",
+    "optimization",
+    "javascript",
+    "js",
+    "typescript",
+    "ts"
   ],
+  "homepage": "https://github.com/j-arb/fsolve-js",
+  "license": "GPL-3.0-or-later",
+  "files": [
+    "/build",
+    "/types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j-arb/fsolve-js.git"
+  },
+  "type": "module",
+  "main": "build/index.js",
+  "types": "types/index.d.ts",
+  "author": {
+    "name": "Juan Esteban Arboleda Restrepo",
+    "email": "juanesteban.arboledagc@gmail.com"
+  },
+
   "devDependencies": {
     "@types/mathjs": "^9.4.2",
     "typescript": "^5.4.5"
