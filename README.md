@@ -26,7 +26,7 @@ console.log(slvr.solve(f, x0));
 
 ## Autor
 Juan Esteban Arboleda Restrepo<br>
-Github: [j-arb](https://github.com/j-arb)
+Github: [j-arb](https://github.com/j-arb)<br>
 Email: [juanesteban.arboledagc@gmail.com](mailto:juanesteban.arboledagc@gmail.com)
 
 ## License
