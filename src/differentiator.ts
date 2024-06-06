@@ -20,16 +20,17 @@ export class Differentiator {
 
     /**
      * Calculates numerical jacobian of f (vector) evaluated at x (vector)
-     * @param f function vector
+     * @param f function vector (m x 1)
      * @param x point vector (n x 1) mathjs matrix
      * 
-     * @returns jacobian matrix.
+     * @returns jacobian matrix (m x n),
      */
     jacobian(f: (x: Matrix) => Matrix, x: Matrix): Matrix {
         const n = x.size()[0];
-        const J = matrix(zeros([n, n]));
+        const m = f(x).size()[0];
+        const J = matrix(zeros([m, n]));
         
-        for(let i = 0; i < n; i++) {
+        for(let i = 0; i < m; i++) {
             const newRow = transpose(this.gradient((x) => f(x).get([i, 0]) , x));
             this.replaceRow(J, newRow, i);
         }
