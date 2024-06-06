@@ -1,6 +1,6 @@
 {
   "name": "fsolve-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A numerical solver for non-linear systems of equations, utilizing the n-dimensional Newton-Raphson method.",
   "keywords": [
     "newton-raphson",
@@ -40,7 +40,6 @@
     "name": "Juan Esteban Arboleda Restrepo",
     "email": "juanesteban.arboledagc@gmail.com"
   },
-
   "devDependencies": {
     "@types/mathjs": "^9.4.2",
     "typescript": "^5.4.5"
