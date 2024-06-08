@@ -134,9 +134,9 @@ export class Solver {
 class Solution {
     private x: Matrix;
     private _solved: boolean;
-    private msg: String;
+    private msg: string;
 
-    constructor(x: Matrix, solved: boolean, msg: String) {
+    constructor(x: Matrix, solved: boolean, msg: string) {
         this.x = x;
         this._solved = solved;
         this.msg = msg;
@@ -159,7 +159,7 @@ class Solution {
     /**
      * @returns solver's message.
      */
-    message(): String {
+    message(): string {
         return this.msg;
     }
 
