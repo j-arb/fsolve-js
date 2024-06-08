@@ -1,5 +1,5 @@
 import { Differentiator } from "./differentiator.js";
-import { multiply, lusolve, add, matrix, index, transpose, Matrix, max, inv, abs } from "mathjs";
+import { multiply, add, Matrix, max, inv, abs, pinv } from "mathjs";
 
 /**
  * Solver class
@@ -62,6 +62,42 @@ export class Solver {
             const J = this.diff.jacobian(f, x0);
             const b = multiply(y0, -1);
             const invJ = inv(J);
+            const h = multiply(invJ, b);
+            x0 = add(x0, h);
+            error = max(abs(f(x0))) as number;
+            iter += 1;
+        }
+
+        return Solution.success(x0);
+    }
+
+    solveUnderdetermined(f: (x: Matrix) => Matrix, x0: Matrix): Solution {
+        const n = x0.size()[0];
+        const m = f(x0).size()[0];
+        if(m > n) {
+            throw new Error("System has more equations than variables.");
+        }
+        if(m === n) {
+            console.warn("Using solveUnderdetermined() for system with same number of variables " + 
+                "and equations. Use solve() for better performance."
+            );
+        }
+
+        let error = Infinity;
+        let iter = 0;
+        const initialTime = Date.now();
+
+        while (error >= this.stopError) {
+            if(iter >= this.maxIterations) {
+                return Solution.maxIterReached(x0);
+            } else if((Date.now() - initialTime) >= this.timeOut) {
+                return Solution.timeOut(x0);
+            }
+
+            const y0 = f(x0);
+            const J = this.diff.jacobian(f, x0);
+            const b = multiply(y0, -1);
+            const invJ = pinv(J);
             const h = multiply(invJ, b);
             x0 = add(x0, h);
             error = max(abs(f(x0))) as number;
