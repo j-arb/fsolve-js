@@ -44,6 +44,16 @@ export class Solver {
         this.diff = new Differentiator(delta);
     }
 
+    /**
+     * Numerically finds the zeros of function f using Newton -
+     * Raphson method.
+     * @param f function to solve
+     * @param x0 initial guess
+     * @returns {Solution} use Solution.solved() to check
+     * if the solver found a solution, Solution.message() to
+     * get solver message and Solution.getX() to get solution's
+     * X vector.
+     */
     solve(f: (x: Matrix) => Matrix, x0: Matrix): Solution {
         const n = x0.size()[0];
 
@@ -71,6 +81,16 @@ export class Solver {
         return Solution.success(x0);
     }
 
+    /**
+     * Numerically finds the zeros of function f using Newton -
+     * Raphson method generalization for underdetermined systems.
+     * @param f function to solve
+     * @param x0 initial guess
+     * @returns {Solution} use Solution.solved() to check
+     * if the solver found a solution, Solution.message() to
+     * get solver message and Solution.getX() to get solution's
+     * X vector.
+     */
     solveUnderdetermined(f: (x: Matrix) => Matrix, x0: Matrix): Solution {
         const n = x0.size()[0];
         const m = f(x0).size()[0];
@@ -108,6 +128,9 @@ export class Solver {
     }
 }
 
+/**
+ * Represents a solution
+ */
 class Solution {
     private x: Matrix;
     private _solved: boolean;
@@ -119,14 +142,23 @@ class Solution {
         this.msg = msg;
     }
 
+    /**
+     * Get solution's X Vector.
+     */
     getX(): Matrix {
         return this.x;
     }
 
+    /**
+     * @returns boolean indicating if the solver found a solution 
+     */
     solved(): boolean {
         return this._solved;
     }
 
+    /**
+     * @returns solver's message.
+     */
     message(): String {
         return this.msg;
     }
